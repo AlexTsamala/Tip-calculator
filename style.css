@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+padding:0;
+margin:0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: #C5E4E7;
+}
+
+.main-container{
+    background-color:#ffffff;
+    border-radius: 25px 25px 0px 0px;
+    font-family: 'Space Mono';
+    padding-bottom: 32px;
+}
+
+.headers{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: #5E7A7D;
+}
+
+.bottom-headers{
+    font-family: Space Mono;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.inputs{
+    font-family: Space Mono;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: right;
+    height: 48px;
+    width: 311px;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    padding-right: 17px;
+    margin-top: 6px;
+    border: none;
+    color:#00474B;
+}
+
+header{
+    margin: 50px 144px 40px;
+}
+
+.tip-calculator{
+    margin:0 32px 0;
+}
+
+.top-div{
+margin-bottom: 32px;
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:32px;
+    padding-top: 32px;
+}
+
+.bill-input{
+    background-image: url(./assets/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: top 13px left 18px;
+}
+
+.number-of-people-input {
+    background-image: url(./assets/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: top 13px left 18px;
+}
+
+.error-message-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message{
+    display:none;
+    color:#E17457;
+}
+
+.tip-buttons{
+    font-family: 'Space Mono';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    background-color: #00474B;
+    border-radius: 5px;
+    border-color:#00474B;
+    height: 48px;
+    width: 147px;
+    color:#FFFFFF;
+    border: none;
+}
+
+.custom-input{
+    background-color: #F3F9FA;
+    color: #547878;
+    border-color:#F3F9FA;
+    height: 48px;
+    width: 148px;
+    border-radius: 5px;
+    border:none;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: right;
+    padding-right:6px;
+}
+
+.buttons-form{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom:32px;
+}
+
+.middle-buttons{
+    margin:16px 0;
+}
+
+.bottom-div{
+    background-color: #00474B;
+    border-radius: 15px;
+    height: 257px;
+    width: 327px;
+    border-radius: 15px;
+    padding: 39px 24px 24px;
+}
+
+.dash-person{
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color:#7F9D9F;
+}
+
+.amount-numbers{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 47px;
+    text-align: right;
+    color:#26C2AE;
+}
+
+.bottoms-little-two{
+    display:flex;
+    flex-direction: column;
+}
+
+.resets-top-divs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total{
+    margin-bottom:25px;
+    margin-top:25px;
+}
+
+.reset-button{
+    height: 48px;
+    width: 281px;
+    border-radius: 5px;
+    background-color: #26C2AE;
+    color:#00474B;
+    font-family: Space Mono;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    border:none;
+}
+
+.custom-input:hover{
+    border: 2px solid #26C2AE;
+}
+
+.buttons-form .tip-buttons:hover{
+    background-color:#9FE8DF;
+}
+
+.bill-input:hover{
+    border:2px solid #26C2AE;
+}
+
+.reset-button:hover{
+    background-color:#9FE8DF;
+}
+
+@media (min-width: 1440px) {
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container{
+    padding:32px 0;
+    border-radius: 25px;
+}
+
+.tip-calculator{
+    display: flex;
+    align-items: flex-end;
+    gap: 48px;
+}
+
+.number-of-people{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs{
+    width:379px;
+}
+
+.middle-buttons{
+    margin:0;
+}
+
+.buttons-form{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.tip-buttons{
+    width:117px;
+}
+
+.custom-input{
+    width:117px;
+    padding-right:0px;
+}
+
+.bottom-div{
+    width:413px;
+    height:417px;
+    text-align: center;
+    padding: 56px 40px 40px;
+}
+
+.amount-numbers{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 71px;
+}
+
+.resets-top-divs{
+    align-items: center;
+}
+
+.reset-button{
+    width:333px;
+    margin-top: 80px;
+}
+
+}

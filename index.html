@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png">
+        <title>Tip calculator app</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header> <img alt="header-image" src="./assets/logo.svg" /> </header>
+        <div class="main-container">
+            <div class="tip-calculator">
+                <div class="top-div">
+                    <div class="header">
+                        <span class="headers">Bill</span>
+                        <input class="bill-input inputs" id="bill-input" type="number" name="type-mail"  placeholder="0">
+                    </div>
+                    <div class="select-tip">
+                        <span class="headers">Select Tip %</span>
+                        <form class="buttons-form">
+                            <div>
+                                <button class="tip-buttons" type="button">5%</button>
+                                <button class="tip-buttons middle-buttons" type="button">10%</button>
+                                <button class="tip-buttons " type="button">15%</button>
+                            </div>
+                            <div>
+                                <button class="tip-buttons" type="button">25%</button>
+                                <button class="tip-buttons middle-buttons" type="button">50%</button>
+                                <input  class="custom-input" type="number" name="type-mail"  placeholder="Custom">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="number-of-people">
+                        <div class="error-message-div">
+                            <span class="headers">Number of People</span>
+                            <span class="error-message">Can’t be zero</span>
+                        </div>
+                        <input class="number-of-people-input inputs" type="number" name="type-mail"  placeholder= "0">
+                    </div>
+                </div>
+                <div class="bottom-div">
+                    <div class="tip-amount resets-top-divs">
+                        <div class="bottoms-little-two">
+                        <span class="bottom-headers">Tip Amount </span>
+                        <span class="dash-person">/ person</span>
+                        </div>
+                        <span class="amount-numbers">$0.00</span>
+                    </div>
+                    <div class="total resets-top-divs">
+                        <div class="bottoms-little-two">
+                        <span class="bottom-headers">Total</span>
+                        <span class="dash-person">/ person</span>
+                        </div>
+                        <span class="amount-numbers">$0.00</span>
+                    </div>
+                        <button class="reset-button" type="button">RESET</button>
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
