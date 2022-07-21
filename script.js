@@ -13,8 +13,9 @@ percentButtons.map((button)=>{
     button.addEventListener('click',()=>{
         let percent = parseInt(button.textContent);
         let amount_number = Number(amount.value);
-        let tip_for_person = (amount_number*percent/100)/number_of_people.value;
-        let total = (amount_number+amount_number*percent/100)/number_of_people.value;
+        if(Number(number_of_people.value)===0){return;} 
+        let tip_for_person = (amount_number*percent/100)/Number(number_of_people.value);
+        let total = (amount_number+amount_number*percent/100)/Number(number_of_people.value);
         tip_amount.textContent='$'+tip_for_person.toFixed(2);
         eachPersonTotal.textContent='$'+total.toFixed(2);
         customInput.value="";
@@ -22,49 +23,55 @@ percentButtons.map((button)=>{
             tip_amount.textContent ='$0.00';
             eachPersonTotal.textContent = '$0.00';
         }
-        })
+    })
 })
 
 customInput.addEventListener('input',(event)=>{
     if(customInput.value>0){
         reset_button.style.backgroundColor= "#26C2AE";
         let customNumber = Number(event.target.value);
-        let amount_number = Number(amount.value);    
-        let tip_for_person = (amount.value*customNumber/100)/number_of_people.value;
-        let total = (amount_number+amount_number*customNumber/100)/number_of_people.value;
+        let amount_number = Number(amount.value);
+        if(Number(number_of_people.value)===0){return;} 
+        let tip_for_person = (amount.value*customNumber/100)/Number(number_of_people.value);
+        let total = (amount_number+amount_number*customNumber/100)/Number(number_of_people.value);
         tip_amount.textContent='$'+tip_for_person.toFixed(2);
         eachPersonTotal.textContent='$'+total.toFixed(2);
-    }else if(customInput.value==0){
-        tip_amount.textContent = '$0.00';
-        eachPersonTotal.textContent = '$0.00';
-    }else {
-        event.target.value=0;
-    }
-   
+    }else if(customInput.value<=0){
+        event.target.value=1;
+    }    
 })
 
 amount.addEventListener("input",(event)=>{
     if(event.target.value<=0){
         amount.value=1;
-    }
-    if(event.target.value>0){
+    }else{
         reset_button.style.backgroundColor= "#26C2AE";
+        let customNumber = Number(customInput.value);
+        if(Number(number_of_people.value)===0){return;};    
+        let tip_for_person = (event.target.value*customNumber/100)/Number(number_of_people.value);
+        let total = (Number(event.target.value)+Number(event.target.value)*customNumber/100)/Number(number_of_people.value);
+        tip_amount.textContent='$'+tip_for_person.toFixed(2);
+        eachPersonTotal.textContent='$'+total.toFixed(2);
+        console.log(total);
     }
 })
 
 number_of_people.addEventListener("input",(event)=>{
     if(event.target.value<=0){
         number_of_people.value=0;
-    
         number_of_people.style.border = "2px solid #E17052";
         error_message.style.display="block";
     }else{
         error_message.style.display="none";
         number_of_people.style.border = "none";
-    }
-
-    if(event.target.value>0){
         reset_button.style.backgroundColor= "#26C2AE";
+        let customNumber = Number(customInput.value);
+        let amount_number = Number(amount.value);
+        if(Number(number_of_people.value)===0){return;}     
+        let tip_for_person = (amount_number*customNumber/100)/number_of_people.value;
+        let total = (amount_number+amount_number*customNumber/100)/number_of_people.value;
+        tip_amount.textContent='$'+tip_for_person.toFixed(2);
+        eachPersonTotal.textContent='$'+total.toFixed(2);
     }
 })
 
