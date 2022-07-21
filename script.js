@@ -37,7 +37,7 @@ customInput.addEventListener('input',(event)=>{
         tip_amount.textContent='$'+tip_for_person.toFixed(2);
         eachPersonTotal.textContent='$'+total.toFixed(2);
     }else if(customInput.value<=0){
-        event.target.value=1;
+        event.target.value="";
     }    
 })
 
@@ -76,8 +76,8 @@ number_of_people.addEventListener("input",(event)=>{
 })
 
 reset_button.addEventListener('click',()=>{
-    amount.value=0;
-    number_of_people.value=0;
+    amount.value="";
+    number_of_people.value="";
     reset_button.style.backgroundColor= "#0D686D";
     error_message.style.display="none";
     number_of_people.style.border = "none";
