@@ -14,29 +14,29 @@
                 <div class="top-div">
                     <div class="header">
                         <span class="headers">Bill</span>
-                        <input class="bill-input inputs" id="bill-input" type="number" name="type-mail"  placeholder="0">
+                        <input class="bill-input inputs" id="bill_input" type="number" name="type-mail"  value="0">
                     </div>
                     <div class="select-tip">
                         <span class="headers">Select Tip %</span>
                         <form class="buttons-form">
                             <div>
-                                <button class="tip-buttons" type="button">5%</button>
-                                <button class="tip-buttons middle-buttons" type="button">10%</button>
-                                <button class="tip-buttons " type="button">15%</button>
+                                <button class="tip_buttons" id="first_button" type="button">5%</button>
+                                <button class="tip_buttons middle-buttons" type="button">10%</button>
+                                <button class="tip_buttons " type="button">15%</button>
                             </div>
                             <div>
-                                <button class="tip-buttons" type="button">25%</button>
-                                <button class="tip-buttons middle-buttons" type="button">50%</button>
-                                <input  class="custom-input" type="number" name="type-mail"  placeholder="Custom">
+                                <button class="tip_buttons" type="button">25%</button>
+                                <button class="tip_buttons middle-buttons" type="button">50%</button>
+                                <input  class="custom-input" id="custom-input" type="number" name="type-number"  placeholder="Custom">
                             </div>
                         </form>
                     </div>
                     <div class="number-of-people">
                         <div class="error-message-div">
                             <span class="headers">Number of People</span>
-                            <span class="error-message">Can’t be zero</span>
+                            <span class="error-message" id="message">Can’t be zero</span>
                         </div>
-                        <input class="number-of-people-input inputs" type="number" name="type-mail"  placeholder= "0">
+                        <input class="number-of-people-input inputs" id="number_of_people" type="number" name="type-mail"  value= "0">
                     </div>
                 </div>
                 <div class="bottom-div">
@@ -45,18 +45,19 @@
                         <span class="bottom-headers">Tip Amount </span>
                         <span class="dash-person">/ person</span>
                         </div>
-                        <span class="amount-numbers">$0.00</span>
+                        <span class="amount-numbers" id="tip_amount">$0.00</span>
                     </div>
                     <div class="total resets-top-divs">
                         <div class="bottoms-little-two">
                         <span class="bottom-headers">Total</span>
                         <span class="dash-person">/ person</span>
                         </div>
-                        <span class="amount-numbers">$0.00</span>
+                        <span class="amount-numbers" id="total_bill">$0.00</span>
                     </div>
-                        <button class="reset-button" type="button">RESET</button>
+                        <button class="reset-button" id="reset_button" type="button">RESET</button>
                     </div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
