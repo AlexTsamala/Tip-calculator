@@ -79,6 +79,8 @@ reset_button.addEventListener('click',()=>{
     tip_amount.textContent= '$0.00';
     eachPersonTotal.textContent = '$0.00';
     customInput.value="";
+    tip_amount.style.fontSize = "48px";
+    eachPersonTotal.style.fontSize = "48px";
 })
 
 
