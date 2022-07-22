@@ -7,7 +7,7 @@ let eachPersonTotal = document.getElementById('total_bill');
 let customInput = document.getElementById('custom-input');
 let percentButtons = Array.from(document.getElementsByClassName('tip_buttons'));
 let percent;
-// document.getElementById('tip_amount').style.color="red";
+
 function updateInfo(){
     let amount_number = Number(amount.value);
     if(Number(number_of_people.value)===0||!percent){return} 
