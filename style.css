@@ -200,7 +200,7 @@ margin-bottom: 32px;
     background-color:#9FE8DF;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
 body{
     display:flex;
     flex-direction: column;
