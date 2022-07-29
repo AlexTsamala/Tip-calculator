@@ -7,7 +7,7 @@ let eachPersonTotal = document.getElementById('total_bill');
 let customInput = document.getElementById('custom-input');
 let percentButtons = Array.from(document.getElementsByClassName('tip_buttons'));
 let percent;
-
+let colorChanger ;
 function updateInfo(){
     let amount_number = Number(amount.value);
     if(Number(number_of_people.value)===0||!percent){return} 
@@ -28,10 +28,19 @@ function updateInfo(){
 }
 
 percentButtons.map((button)=>{
-    button.addEventListener('click',()=>{
-        percent = parseInt(button.textContent);
-        updateInfo();
-        customInput.value="";
+        button.addEventListener('click',(event)=>{
+            
+            
+            if(colorChanger!=undefined){
+                colorChanger.style.backgroundColor ="#00474B";
+                colorChanger.style.color = "#FFFFFF";
+            } 
+            event.target.style.backgroundColor ="#26C2AE";
+            event.target.style.color = "#00474B";
+            colorChanger = event.target;
+            percent = parseInt(button.textContent);
+            updateInfo();
+            customInput.value="";
     })
 })
 
@@ -42,7 +51,9 @@ customInput.addEventListener('input',(event)=>{
         updateInfo();
     }else if(customInput.value<=0){
         customInput.value="";
-    }    
+    }
+    colorChanger.style.backgroundColor ="#00474B";
+    colorChanger.style.color = "#FFFFFF";    
 })
 
 amount.addEventListener("input",(event)=>{
@@ -81,6 +92,8 @@ reset_button.addEventListener('click',()=>{
     customInput.value="";
     tip_amount.style.fontSize = "48px";
     eachPersonTotal.style.fontSize = "48px";
+    colorChanger.style.backgroundColor ="#00474B";
+    colorChanger.style.color = "#FFFFFF";
 })
 
 
